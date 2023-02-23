@@ -16,7 +16,7 @@ I tested that connection by connecting to the AWS EC2-A server and pinging the I
 
 To integrate DNS, I utilized Route53 and configured inbound endpoints which allowed the on-premises environment to resolve DNS records that are stored on the DNS infrastructure in the AWS environment. I copied down the IP addresses of the inbound endpoints that were created in AWS. These IP addresses would be necessary in the following stages. 
 
-**Route53 inbound endpoints are elastic network interfaces which will run in AWS and can be used by the on-premises environment.**
+*Route53 inbound endpoints are elastic network interfaces which will run in AWS and can be used by the on-premises environment.*
 
 I then had to do some configuration in the on-premise environment. I connected to the DNS A server and edited a configuration file that specifies the IP addresses that will have queries forwarded to them. It was here where I added the IP addresses of the AWS inbound endpoints I had previously created. I executed the previous steps for DNS B server.
 
